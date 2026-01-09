@@ -64,6 +64,14 @@ curl http://localhost:9222/json/list
 
 ### MCP chrome-devtools 连接
 
+**方式一：使用 CLI 命令**
+
+```bash
+claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest --browserUrl http://127.0.0.1:9222
+```
+
+**方式二：使用项目配置**
+
 配置已在 `.mcp.json` 中设置，重启 Claude Code 后自动连接。
 
 ## 关键配置文件

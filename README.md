@@ -64,7 +64,15 @@ curl http://localhost:9222/json/list
 
 ### MCP chrome-devtools Connection
 
-Configuration is set in `.mcp.json`. Restart Claude Code to auto-connect.
+**Option 1: Use CLI command**
+
+```bash
+claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest --browserUrl http://127.0.0.1:9222
+```
+
+**Option 2: Use project config**
+
+Configuration is already set in `.mcp.json`. Restart Claude Code to auto-connect.
 
 ## Key Configuration Files
 
