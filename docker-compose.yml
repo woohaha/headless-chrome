@@ -1,0 +1,19 @@
+services:
+  chrome:
+    image: lscr.io/linuxserver/chrome:latest
+    container_name: chrome
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - CHROME_CLI=http://host.docker.internal:8080/
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "9222:9223"
+    volumes:
+      - ./config:/config
+    shm_size: "1gb"
+    restart: unless-stopped

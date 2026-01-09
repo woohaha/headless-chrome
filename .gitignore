@@ -1,0 +1,2 @@
+# Container config directory (mounted volume, not tracked)
+config/
